@@ -1,0 +1,71 @@
+1º CREAR PAQUETE CON EL NOMBRE DE ENTIDADES (DONDE SE CONTENDRAN LOS DIFERENTES TIPOS DE OBJETOS)
+
+2º CREAR ARCHIVO JAVA CLASS CON EL NOMBRE DEL OBJETO
+
+3º DENTRO DEL ARCHIVO JAVA CLASS DEFINIR ATRIBUTOS COMO PRIVADOS, CREAR CONSTRUCTORES, GETTER AND SETTER Y TO STRING
+
+4º A FIN DE REALIZAR OPERACIONES CREAR UN PAQUETE LLAMADO SERVICIO (SERVICE)
+
+5º SE LLENAN LOS VALORES DE LOS ATRIBUTOS A TRAVES DEL PRIMER METODO:
+
+ejemplo:
+
+public "nombre de la clase objeto" "nombre del nuevo metodo"{
+
+se intancia el objeto
+
+"tipo de la clase creada" "nombre de la variable" = new "constructor vacío"; 
+
+se solicita que llenen los valores de las variables utilizando el SET.
+
+}
+
+--------------------------------------------------------------------------------------------
+Y luego se puede crear nuevos métodos para operar de acuerdo a lo requerido; dichos metodos pueden o no devolver un resultado al main
+--------------------------------------------------------------------------------------------
+
+Ejercicio 3 de la guia
+
+public Operacion crearOperacion{
+
+Operacion op = new Operacion();
+
+   System.out.println("Ingrese dos números");
+        
+        op.setNum1(leer.nextInt());
+        op.setNum2(leer.nextInt());
+        
+        return op;
+
+}
+
+ public int Sumar(Operacion op){
+    
+        int suma;
+        
+        suma= op.getNum1() + op.getNum2();
+        
+        return suma;
+    
+    }
+
+
+6º EN EL MAIN SE INSTANCIA VARIABLE DEL TIPO SERVICIO PARA PODER LLAMAR A LAS OPERACIONES AHI DECLARADAS. Y LUEGO DECLARO UNA VARIABLE DEL TIPO CLASE OBJETO PARA CARGAR LOS DATOS.
+
+public static void main(String[] args) {
+        
+        //se declara variable para llamar al Servicio
+        OperacionServicio calculo = new OperacionServicio();
+        
+        //se declara variable del tipo Operacion que vaya al servicio para darle datos a los atributos
+        Operacion op1 = calculo.crearOperacion();
+        
+               
+        System.out.println("SUMA: " + calculo.Sumar(op1));
+        System.out.println("RESTA: " + calculo.Restar(op1));
+        System.out.println("MULTIPLICACION: " + calculo.Multiplicar(op1));
+        System.out.println("DIVISION: " + calculo.Dividir(op1));
+        
+        
+    }
+

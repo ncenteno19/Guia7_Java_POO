@@ -1,0 +1,20 @@
+C:\Program Files\Java\jdk1.8.0_111
+
+
+funcion para poder leer (ingresar datos por teclado)
+ Scanner leer = new Scanner(System.in);
+
+para corregir error en Scanner
+  Scanner leer = new Scanner(System.in).useDelimiter("\n"); /*Para leer String frase después de un entero, por ejemplo y no tener que poner un nextLine, o saltar línea, o algún otro inconveniente de lectura
+*/
+
+
+(Para leer String frase después de un entero, por ejemplo y no tener que poner un nextLine, o saltar línea, o algún otro inconveniente de lectura.)
+
+
+https://www.youtube.com/watch?v=XeZGv_jT4fk&t=69s
+
+
+explicaion de ejercicios
+https://www.youtube.com/c/Andr%C3%A9sMartinoCamacho
+
